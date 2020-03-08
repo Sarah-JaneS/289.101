@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Week two - Sarah-Jane Seddon</title>
+        <style>
+            /** Descendant selector **/
+            ol li {
+                color: violet;
+            }
+            
+            /** Child selector **/
+            div > p {
+                color:red;
+            }
+            
+            /** Adjacent selector **/
+            p + p {
+                color:blue;
+            }
+            
+            /** COMBINING TWO SELECTORS ( PINK + ORANGE TEXT ) **/
+            
+            /** General ssibling selector **/
+            div ~ ul {
+                color:orange;
+            }
+                
+            /** Class Selector **/
+            .pink {
+                color: pink;
+                font-style: italic;
+            }
+         </style>
+    </head>
+    
+    <body>
+        <p>leave this text as the default black</p>
+        <ol>
+            <li>make the text for list items 1 and 2 violet using a descendant selector</li>
+            <li>make the text for list items 1 and 2 violet using a descendant selector</li>
+            
+        </ol>
+        <div>
+            <p>make this text red using a child selector</p>
+            <p>make this text blue using an adjacent selector</p>
+        </div>
+        <ul>
+            <li>make this text orange using a general sibling selector;<span class="pink"> and this phrase pink by combining 2 types of selectors</span></li>
+        </ul>    
+    </body>
+
+</html>
