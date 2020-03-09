@@ -1,0 +1,42 @@
+.red{
+    color:red;
+}
+
+body{
+    margin: 0;
+}
+
+#box1{
+    background-color:yellow;
+    border: 10px solid red;
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 50px;
+    padding-top: 100px;
+    width: 200px;
+}
+
+#box2{
+    background-color:olive;
+    border-top: 5px dashed blue;
+    height: 200px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 10px;
+    width: 100px;
+    
+}
+
+.important{
+    color: #008080;
+    font-style: italic;
+}
+            
+.important{
+    color:bisque;
+}
+            
+h1{
+    background-color:orange;
+}
+            
