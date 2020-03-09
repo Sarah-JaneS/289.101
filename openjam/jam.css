@@ -1,0 +1,100 @@
+/**{outline: red 1px solid}**/
+
+body{
+    background-color: #82DDB5;
+    background-image: url('img/illustration.gif'),
+    url('img/texture.jpg');
+    background-position: center 280px, left top;
+    background-repeat: no-repeat, repeat-x;
+    background-size:800px, auto;
+    font-family: 'Quicksand',sans-serif;
+    margin: 0;
+}
+
+#nav{
+    background-color: #6B9;
+    border-bottom: 2px dashed #487;
+    color: white;
+    font-weight: bold;
+    padding: 20px 0;
+    text-align: center;
+    word-spacing: 2em;
+    
+}
+
+#header{
+    text-align:center;
+    margin-top:40px;
+}
+
+#logo {
+    max-width: 360px;
+}
+
+#description, #date{
+    max-width: 220px;
+
+}
+
+.register_btn{
+    background-color: #E43;
+    border-radius: 2m;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 25px;
+    padding: 15px 30px;
+}
+
+
+#what{
+    background-color: #C6EDDB;
+    padding-top: 25px;
+    padding-left: 500px;
+    padding-right: 500px;
+    opacity: 0.9;
+    border-radius: 2m;
+    color: #48808E;
+    cursor: pointer;
+    margin-top: 400px;
+    text-align: center;
+    
+}
+
+#why{
+    background-color: #B6EAD3;
+    color: #48808E;
+    padding-top: 25px;
+    padding-left: 500px;
+    padding-right: 500px;
+    cursor: pointer;
+    text-align: center; 
+}
+
+#where{
+    background-color: #C6EDDB;
+    color: #48808E;
+    padding-top: 25px;
+    padding-left: 500px;
+    padding-right: 500px;
+    cursor: pointer;
+    text-align: center; 
+    
+}
+
+#when{
+    background-color: #3D7975;
+    color: #48808E;
+    cursor: pointer;
+    text-align: center;  
+    
+}
+
+#who{
+    background-color: #C6EDDB;
+    color: #48808E;
+    cursor: pointer;
+    text-align: center; 
+}
+
