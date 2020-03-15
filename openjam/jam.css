@@ -1,5 +1,4 @@
 /**{outline: red 1px solid}**/
-
 body{
     background-color: #82DDB5;
     background-image: url('img/illustration.gif'),
@@ -11,6 +10,7 @@ body{
     margin: 0;
 }
 
+/**Navigation **/
 #nav{
     background-color: #6B9;
     border-bottom: 2px dashed #487;
@@ -22,9 +22,8 @@ body{
     
 }
 
-#header{
-    text-align:center;
-    margin-top:40px;
+a {
+    color: white;
 }
 
 #logo {
@@ -47,54 +46,95 @@ body{
     padding: 15px 30px;
 }
 
+/**Header**/
+#header{
+    text-align:center;
+    margin-top:40px;
+}
 
+h1 {
+    text-align: center;
+}
+
+h2{
+    text-align:center;
+}
+h3 {
+    text-align:center;
+}
+
+hr {
+    border-style:dashed;
+    border-color: white;
+}
+/** #Div **/
 #what{
     background-color: #C6EDDB;
     padding-top: 25px;
-    padding-left: 500px;
-    padding-right: 500px;
+    padding-left: 350px;
+    padding-right: 350px;
     opacity: 0.9;
     border-radius: 2m;
     color: #48808E;
     cursor: pointer;
     margin-top: 400px;
-    text-align: center;
+    text-align: left;
+    border: 0px;
     
 }
 
 #why{
-    background-color: #B6EAD3;
     color: #48808E;
     padding-top: 25px;
-    padding-left: 500px;
-    padding-right: 500px;
+    padding-left: 350px;
+    padding-right: 350px;
+    padding-bottom: 25px;
     cursor: pointer;
-    text-align: center; 
+    text-align: left; 
 }
 
 #where{
-    background-color: #C6EDDB;
-    color: #48808E;
+    color: #B94387;
     padding-top: 25px;
-    padding-left: 500px;
-    padding-right: 500px;
+    padding-left: 266px;
+    padding-right: 266px;
+    padding-bottom: 500px;
     cursor: pointer;
-    text-align: center; 
-    
+    text-align: right; 
+    background-image: url('img/map.gif');
+    background-size: 1500px, 738px;
+    background-repeat: no-repeat;
 }
 
 #when{
-    background-color: #3D7975;
-    color: #48808E;
+    background-image:url('img/wires.png');
+    background-repeat: repeat-x;
+    background-size:600px;
+    color:white;
     cursor: pointer;
-    text-align: center;  
-    
+    text-align: left;
+    padding-top: 25px;
+    padding-left: 350px;
+    padding-right: 350px;
+    padding-bottom: 25px; 
 }
 
 #who{
-    background-color: #C6EDDB;
+    background-color: white;
     color: #48808E;
     cursor: pointer;
-    text-align: center; 
+    text-align: left; 
+    padding-top: 25px;
+    padding-left: 350px;
+    padding-right: 350px;
+    padding-bottom: 25px;
+}
+
+
+/** Footer **/
+#footer{
+    text-align:center;
+    background-image: url('img/texture.jpg') ;
+    
 }
 
