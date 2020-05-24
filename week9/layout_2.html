@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!1DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8"/>
@@ -9,87 +9,130 @@
         
         <style>
             * {outline: white 8px solid}
+            
             .blue{
                 background-color: #3fb4ff;
                 height:50px;
             }
             
-            
             .green {
                 background-color: greenyellow;
                 height:150px;
             }
+            
+            
             .grey {
                 background-color: lightgray;
-                height: 60px;
+                height: 200px;
+                width: 250px;
                 
             }
-              /* xs devices */
+            
+            .maroon{
+                background-color: maroon;
+                height: 600 
+            }
+                
+            
+            .violet{
+                background-color:violet;
+                height: 50px;
+            }
+            
+            
+             /* xs devices */
+            /*MOBILE*/
             body {
                 background-color: red;
             }
+            
+
             /*sm devices */ 
+             /*MOBILE*/
             @media (min-width:992px) {
                 body {background-color: green}
+                .maroon{height: 500px;}    
             }
             
+            
             /* md devices */
+            /* TABLET */
             
             @media (min-width: 768px) {
                 body { background-color: yellow}
-                
                 .green{height: 200px;}
+                .grey{height: px}
                 
-                .orange {height: 100px}
+            
+                
+                
+                
                 }
-            
-                
+         
             /* lg device */
-            
+            /* DESKTOP */
             @media (min-width: 992px) {
                 body {background-color: green }
-                
-                .green { height: 250px; }
-                
-                .orange { height: 200px;}
-                
-                .grey { height: 250px;}
+                .grey{height: 200px}
+                .grey{width: 200px;}
+                .green { height: 1000px; }
+                .green { max-width: 300px; }
+    
             }
         
             /* xl device */
             
             @media (min-width: 1200px){
                 body{background-color: blue}
-            }              
+            }
         </style>
-    
+        
     </head>
-    
     <body>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12  blue"></div>
+            <div class= "row">
+                <div class="col-lg-12 blue"></div> 
             </div>
             <div class="row">
-                <div class="col-12 d-xl-none green"></div>
+                <div class="col-lg-12 green"></div>
             </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-3 d-none d-sm-block grey"></div>
-                <div class="col-md-6 col-lg-3 d-none d-sm-block grey"></div>
-                <div class="col-md-6 col-lg-3 d-none d-sm-block grey"></div>
-                <div class="col-md-6 col-lg-3 d-none d-sm-block grey"></div>
-                <div class="col-md-6 col-lg-3 d-none d-sm-block grey"></div>
-                <div class="col-md-6 col-lg-3 d-none d-sm-block grey"></div>
+            <div class= "col-sm-6 float-left">
+            <div class="row ">
+                <div class="col-sm-6 grey"></div>
+                <div class="col-sm-6 grey"></div>
+                <div class="col-sm-6 grey"></div>
+                <div class="col-sm-6 grey"></div>
+                <div class="col-sm-6 grey"></div>
+                <div class="col-sm-6 grey"></div>
+            </div>
+            </div>
+            <div class="col-sm-6 float-right">
+                <div class="row">
+                <div class="col-sm-12 maroon "></div>
+                </div>                 
+            </div>
+        
+        
             
-            </div>
             
-        
-        
-        
-        
+            
+            
+            
+            <div class="row">
+                <div class="col-sm-2 d-none d-lg-block d-xl-none"></div>
+                <div class="col-sm-3 violet d-none d-lg-block d-xl-none"></div>
+                <div class="col-sm-3 violet d-none d-lg-block d-xl-none"></div>
+                <div class="col-sm-3 d-none d-lg-block d-xl-none"></div>
+                <div class="col-sm-3 violet d-none d-lg-block d-xl-none"></div>
+                <div class="col-sm-3 violet d-none d-lg-block d-xl-none"></div>
+                <div class="col-sm-3 violet d-none d-lg-block d-xl-none"></div>
+            </div>
         </div>
     
     </body>
+
+
+
 
 
 
