@@ -13,24 +13,29 @@
             .blue{
                 background-color: #3fb4ff;
                 height:50px;
+                margin: 10px;
             }
             
             .green {
                 background-color: greenyellow;
                 height:150px;
+                margin-bottom:10px;
+                margin-left: 10px;
+                margin-right: 10px;
             }
             
             
             .grey {
                 background-color: lightgray;
-                height: 200px;
-                width: 200px;
+                height: 235px;
+                max-width: 235;
+                margin-bottom: 3px;
                 
             }
             
             .maroon{
                 background-color: maroon;
-                height: 600 
+                height: 705px;
             }
                 
             
@@ -40,16 +45,11 @@
             }
             
             
-             /* xs devices */
-            /*MOBILE*/
-            body {
-            }
-            
 
             /*sm devices */ 
              /*MOBILE*/
             @media (min-width:992px) {
-                .maroon{height: 500px;}
+                .maroon{height: 400px;}
             }
             
             
@@ -58,30 +58,27 @@
             
             @media (min-width: 768px) {
                 .green{height: 200px;}
-                .grey{height: px}
-                
-                }
+            }
          
             /* lg device */
             /* DESKTOP */
+            
             @media (min-width: 992px) {
-                .green { height:1200px; }
-                .green { max-width: auto; }
-                .maroon {height: 1200px;}
+                .green { height:1425px;}
+                .green { max-width: auto;}
+                .maroon {height: 1425px;}
                 .maroon {max-width: auto}
-                .violet {height: 200px;}
-    
+                .violet {height: 235px;}
             }
         
             /* xl device */
             
-            @media (min-width: 1200px){
-                .green { height:1200px; }
-                .green { max-width: auto; }
-                .maroon {height: 1200px;}
+            @media (min-width: 1500px){
+                .green { height:1425px;}
+                .green { max-width: auto;}
+                .maroon {height: 1425px;}
                 .maroon {max-width: auto}
-                .violet {height: 200px;}
-
+                .violet {height: 235px;}
             }
         </style>
         
@@ -91,9 +88,11 @@
             <div class= "row">
                 <div class="col-lg-12 blue"></div> 
             </div>
+            
             <div class="row">
                 <div class="col-lg-12 green d-lg-none d-xl-none "></div>
             </div>
+            
             <div class= "col-sm-6 float-left">
                 <div class="row">
                     <div class="col-sm-6 d-lg-none d-xl-none grey"></div>
@@ -104,6 +103,7 @@
                     <div class="col-sm-6 d-lg-none d-xl-none grey"></div>
                 </div>
             </div>
+            
             <div class="col-sm-6 float-right">                
                 <div class="row">
                     <div class="col-sm-12 maroon"></div>
@@ -138,14 +138,4 @@
         </div>
     
     </body>
-
-
-
-
-
-
-
-
-
-
 </html>
