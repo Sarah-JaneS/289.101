@@ -43,15 +43,13 @@
              /* xs devices */
             /*MOBILE*/
             body {
-                background-color: red;
             }
             
 
             /*sm devices */ 
              /*MOBILE*/
             @media (min-width:992px) {
-                body {background-color: green}
-                .maroon{height: 500px;}    
+                .maroon{height: 500px;}
             }
             
             
@@ -59,31 +57,31 @@
             /* TABLET */
             
             @media (min-width: 768px) {
-                body { background-color: yellow}
                 .green{height: 200px;}
                 .grey{height: px}
-                
-            
-                
-                
                 
                 }
          
             /* lg device */
             /* DESKTOP */
             @media (min-width: 992px) {
-                body {background-color: green }
-                .grey{height: 200px}
-                .grey{width: 200px;}
-                .green { height: 1000px; }
-                .green { max-width: 300px; }
+                .green { height:1200px; }
+                .green { max-width: auto; }
+                .maroon {height: 1200px;}
+                .maroon {max-width: auto}
+                .violet {height: 200px;}
     
             }
         
             /* xl device */
             
             @media (min-width: 1200px){
-                body{background-color: blue}
+                .green { height:1200px; }
+                .green { max-width: auto; }
+                .maroon {height: 1200px;}
+                .maroon {max-width: auto}
+                .violet {height: 200px;}
+
             }
         </style>
         
@@ -94,16 +92,16 @@
                 <div class="col-lg-12 blue"></div> 
             </div>
             <div class="row">
-                <div class="col-lg-12 green"></div>
+                <div class="col-lg-12 green d-lg-none d-xl-none "></div>
             </div>
             <div class= "col-sm-6 float-left">
                 <div class="row">
-                    <div class="col-sm-6 grey"></div>
-                    <div class="col-sm-6 grey"></div>
-                    <div class="col-sm-6 grey"></div>
-                    <div class="col-sm-6 grey"></div>
-                    <div class="col-sm-6 grey"></div>
-                    <div class="col-sm-6 grey"></div>
+                    <div class="col-sm-6 d-lg-none d-xl-none grey"></div>
+                    <div class="col-sm-6 d-lg-none d-xl-none grey"></div>
+                    <div class="col-sm-6 d-lg-none d-xl-none grey"></div>
+                    <div class="col-sm-6 d-lg-none d-xl-none grey"></div>
+                    <div class="col-sm-6 d-lg-none d-xl-none grey"></div>
+                    <div class="col-sm-6 d-lg-none d-xl-none grey"></div>
                 </div>
             </div>
             <div class="col-sm-6 float-right">                
@@ -112,19 +110,31 @@
                 </div>
             </div>
             
-            
-            
-            
-            
-            <div class="row">
-                <div class="col-sm-2 d-none d-lg-block d-xl-none"></div>
-                <div class="col-sm-3 violet d-none d-lg-block d-xl-none"></div>
-                <div class="col-sm-3 violet d-none d-lg-block d-xl-none"></div>
-                <div class="col-sm-3 d-none d-lg-block d-xl-none"></div>
-                <div class="col-sm-3 violet d-none d-lg-block d-xl-none"></div>
-                <div class="col-sm-3 violet d-none d-lg-block d-xl-none"></div>
-                <div class="col-sm-3 violet d-none d-lg-block d-xl-none"></div>
+            <!--Desktop -->
+        
+            <div class="col-sm-3 float-left">
+                <div class="row">
+                    <div class="col-sm-12 green d-none d-lg-block d-xl-block"></div>
+                </div>
             </div>
+            
+            <div class="col-sm- float-center">
+                <div class="row">
+                    <div class="col-sm-4 d-none d-lg-block d-xl-block grey"></div>
+                    <div class="col-sm-8 violet d-none d-lg-block d-xl-block"></div>
+                    <div class="col-sm-4 d-none d-lg-block d-xl-block grey"></div>
+                    <div class="col-sm-8 violet d-none d-lg-block d-xl-block"></div>
+                    <div class="col-sm-4 d-none d-lg-block d-xl-block grey"></div>
+                    <div class="col-sm-8 violet d-none d-lg-block d-xl-block"></div>
+                    <div class="col-sm-4 d-none d-lg-block d-xl-block grey"></div>
+                    <div class="col-sm-8 violet d-none d-lg-block d-xl-block"></div>
+                    <div class="col-sm-4 d-none d-lg-block d-xl-block grey"></div>
+                    <div class="col-sm-8 violet d-none d-lg-block d-xl-bock"></div>
+                    <div class="col-sm-4 d-none d-lg-block d-xl-block grey"></div>
+                    <div class="col-sm-8 violet d-none d-lg-block d-xl-block"></div>
+                </div>
+            </div>
+
         </div>
     
     </body>
