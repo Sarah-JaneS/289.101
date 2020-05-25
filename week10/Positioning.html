@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Absolute Positioning Examples</title>
+    
+        <style>
+            #red{
+                background-color: red;
+                height: 250px;
+                width: 250px;
+                position: relative; 
+            }
+            
+            #yellow{
+                background-color: yellow;
+                height: 80px;
+                width: 80px;
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                z-index: 1px; /* Yellow div to render above purple */
+            }
+            
+            #purple{
+                background-color: purple;
+                height: 30px;
+                width: 190px;
+                position: absolute;
+                left: 10px;
+                top: 50px;
+            }
+            
+            #blue {
+                background-color: lightblue;
+                height: 50px;
+                width: 50px;
+                position: fixed; /*positioned relative to the veiw port */
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id= "red">
+            <div id="yellow"></div>
+            <div id="purple"></div>
+        </div>
+        
+        <div id="blue"></div>
+    </body>
+</html>
