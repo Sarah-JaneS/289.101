@@ -138,7 +138,17 @@
             document.getElementById('eye_right').style.left = eye_right_x + 'px';       
        });
         
-       
+       // hollow eyes
+        
+        //solid eyes
+        
+        //no right eye event listener
+         document.getElementById('eyes_noright_btn').addEventListener('click', function () {
+            document.getElementById("eye_right").style.visibility = "hidden";
+        });
+        
+        
+        
         
         // moves mouth up event listener 
         document.getElementById('mouth_up_btn').addEventListener('click', function() {
@@ -153,15 +163,20 @@
             document.getElementById('happy_mouth').style.top = happy_mouth_y + 'px';
         });     
         
+    
+        
+        
         
         //changes to happy mouth
         
         
         
         // Changes to sad mouth
-        document.getElementById('sad_mouth_btn').addEventListener('click', function(){
+       
+    
+        document.getElementById('sad_mouth_btn').addEventListener('toggle', function(){
             sad_mouth_y
-            document.getElementById('happy_mouth').style.top = sad_mouth + 'px';
+            document.getElementById('happy_mouth').style.display = sad_mouth + 'px';
         });
         
         // Reset face
