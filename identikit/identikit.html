@@ -39,10 +39,25 @@
             position: absolute;
             width: 50px;
         }
-
-        #happy_mouth, #sad_mouth {
+        
+        
+        #hollow_right, #hollow_left {
+            position: absolute;
+            width: 50px;
+            visibility: hidden;
+            
+        }
+        
+        
+        #happy_mouth {
             position: absolute;
             width: 200px;
+        }
+        
+        #sad_mouth {
+            position: absolute;
+            width: 200px;
+            visibility: hidden;
         }
         
     </style>
@@ -60,17 +75,18 @@
         <a id="eyes_noright_btn">no right eye</a>
         <a id="mouth_up_btn">move mouth up</a>
         <a id="mouth_down_btn">move mouth down</a>
-        <a>happy mouth</a>
+        <a id="happy_mouth_btn">happy mouth</a>
         <a id="sad_mouth_btn">sad mouth</a>
-        <a>reset face</a>
+        <a id="face_reset_btn">reset face</a>
     </div>
 
     <div id="face">
         <img id="eye_left" src="eye_solid.svg" />
         <img id="eye_right" src="eye_solid.svg" />
-        <img id="eye_hollow" scr="eye_hollow.svg"/>
+        <img id="hollow_left" src="eye_hollow.svg"/>
+        <img id="hollow_right" src="eye_hollow.svg"/>
         <img id="happy_mouth" src="mouth_happy.svg" />
-        <img id="sad_mouth" scr="mouth_sad.svg" />
+        <img id="sad_mouth" src="mouth_sad.svg" />
         
     </div>
 
@@ -80,6 +96,11 @@
         var eye_left_y = 100;
         var eye_right_x = 250;
         var eye_right_y = 100;
+        
+        var hollow_left_x = 100;
+        var hollow_left_y = 100;
+        var hollow_right_x = 250;
+        var hollow_right_y = 100;
         
         var happy_mouth_x = 100;
         var happy_mouth_y = 250;
@@ -101,8 +122,13 @@
         document.getElementById('sad_mouth').style.left = sad_mouth_x + 'px';        
         document.getElementById('sad_mouth').style.top = sad_mouth_y + 'px';
         
+        document.getElementById('hollow_right').style.left = hollow_right_x + 'px';
+        document.getElementById('hollow_right').style.top = hollow_right_y + 'px';
+        document.getElementById('hollow_left').style.left = hollow_left_x + 'px';
+        document.getElementById('hollow_left').style.top = hollow_left_y + 'px';
         
         
+        //EYES
         
         // move eyes up event listener
         document.getElementById('eyes_up_btn').addEventListener('click', function() {
@@ -110,6 +136,10 @@
             document.getElementById('eye_left').style.top = eye_left_y + 'px';
             eye_right_y -= 10;
             document.getElementById('eye_right').style.top = eye_right_y + 'px';
+            hollow_left_y -= 10;
+            document.getElementById('hollow_left').style.top = hollow_left_y + 'px';
+            hollow_right_y -= 10;
+            document.getElementById('hollow_right').style.top = hollow_right_y + 'px';
         });
         
        // moves eyes down even listener     
@@ -118,7 +148,11 @@
             eye_left_y += 10;
             document.getElementById('eye_left').style.top = eye_left_y + 'px';
             eye_right_y += 10;
-            document.getElementById('eye_right').style.top = eye_right_y + 'px';       
+            document.getElementById('eye_right').style.top = eye_right_y + 'px';
+            hollow_left_y += 10;
+            document.getElementById('hollow_left').style.top = hollow_left_y + 'px';
+            hollow_right_y += 10;
+            document.getElementById('hollow_right').style.top = hollow_right_y + 'px'; 
        });
         
        // moves eyes together listener 
@@ -126,7 +160,11 @@
             eye_left_x +=10;
             document.getElementById('eye_left').style.left = eye_left_x + 'px';
             eye_right_x -=10;
-            document.getElementById('eye_right').style.left = eye_right_x + 'px';       
+            document.getElementById('eye_right').style.left = eye_right_x + 'px';
+            hollow_left_x +=10;
+            document.getElementById('hollow_left').style.left = hollow_left_x + 'px';
+            hollow_right_x -=10;
+            document.getElementById('hollow_right').style.left = hollow_right_x + 'px';
        });
         
        // move eyes apart listener 
@@ -135,25 +173,48 @@
             eye_left_x -=10;
             document.getElementById('eye_left').style.left = eye_left_x + 'px';
             eye_right_x +=10;
-            document.getElementById('eye_right').style.left = eye_right_x + 'px';       
+            document.getElementById('eye_right').style.left = eye_right_x + 'px';  
+            hollow_left_x -=10;
+            document.getElementById('hollow_left').style.left = hollow_left_x + 'px';
+            hollow_right_x +=10;
+            document.getElementById('hollow_right').style.left = hollow_right_x + 'px';
        });
         
-       // hollow eyes
+       // hollow eyes event listener 
+        document.getElementById('eyes_hollow_btn').addEventListener('click', function () {
+            document.getElementById("eye_right").style.visibility = "hidden";
+            document.getElementById("eye_left").style.visibility = "hidden";  
+            document.getElementById("hollow_left").style.visibility = "visible";    
+            document.getElementById("hollow_right").style.visibility = "visible";   
+        });        
         
-        //solid eyes
+        
+        //solid eyes event listener 
+        document.getElementById('eyes_solid_btn').addEventListener('click', function () {
+            document.getElementById("eye_right").style.visibility = "visible";
+            document.getElementById("eye_left").style.visibility = "visible";
+            document.getElementById("hollow_left").style.visibility = "hidden";    
+            document.getElementById("hollow_right").style.visibility = "hidden";  
+        });          
+        
         
         //no right eye event listener
          document.getElementById('eyes_noright_btn').addEventListener('click', function () {
-            document.getElementById("eye_right").style.visibility = "hidden";
+            document.getElementById("eye_right").style.visibility = "hidden";    
+            document.getElementById("hollow_right").style.visibility = "hidden";
         });
         
         
+        
+        //MOUTH 
         
         
         // moves mouth up event listener 
         document.getElementById('mouth_up_btn').addEventListener('click', function() {
             happy_mouth_y -= 10;
             document.getElementById('happy_mouth').style.top = happy_mouth_y + 'px';
+            sad_mouth_y -= 10;
+            document.getElementById('sad_mouth').style.top = sad_mouth_y + 'px';
         });
         
 
@@ -161,26 +222,36 @@
         document.getElementById('mouth_down_btn').addEventListener('click', function(){
             happy_mouth_y += 10;
             document.getElementById('happy_mouth').style.top = happy_mouth_y + 'px';
+            sad_mouth_y += 10;
+            document.getElementById('sad_mouth').style.top = sad_mouth_y + 'px';
         });     
         
     
+         //changes to happy mouth event listener
+         document.getElementById('happy_mouth_btn').addEventListener('click', function() {
+            document.getElementById('happy_mouth').style.visibility = "visible";
+            document.getElementById('sad_mouth').style.visibility = "hidden"; 
+            
+        });         
         
-        //changes to happy mouth
         
-        
-        
-        // Changes to sad mouth
+        // Changes to sad mouth  event listener
        
-    
-        document.getElementById('sad_mouth_btn').addEventListener('toggle', function(){
-            sad_mouth_y
-            document.getElementById('happy_mouth').style.display = sad_mouth + 'px';
+        document.getElementById('sad_mouth_btn').addEventListener('click', function() {
+            document.getElementById('happy_mouth').style.visibility = "hidden";
+            document.getElementById('sad_mouth').style.visibility = "visible"; 
+            
         });
         
-        // Reset face
+    
+        //FACE 
         
         
+        // Reloads face event listener
         
+        document.getElementById('face_reset_btn').addEventListener('click', function(){
+            window.location.reload()  
+        });
         
     </script>
 
